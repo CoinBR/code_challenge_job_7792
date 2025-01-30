@@ -44,3 +44,11 @@ Features:
  - [ ] Include a README file with:
    - [ ] Setup instructions.
    - [ ] Brief explanation of your approach.
+
+---
+
+## Running the project
+- Run, in the root of the project:
+  - `./run.sh`
+- Follow the instructions on the script output
+

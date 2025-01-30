@@ -1,4 +1,3 @@
-
 > [!IMPORTANT]  
 > Before starting, create a public GitHub/GitLab repository and share the link with the interviewer.
 
@@ -58,5 +57,10 @@ Features:
    - [ ] Setup instructions.
    - [ ] Brief explanation of your approach.
 
+---
 
+## Running the project
+- Run, in the root of the project:
+  - `./run.sh`
+- Follow the instructions on the script output
 
