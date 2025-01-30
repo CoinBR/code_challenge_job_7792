@@ -3,7 +3,7 @@ set -e
 
 DIR=$(dirname "$(readlink -f "$0")")
 
-. "$DIR/backend/.env"
+. "$DIR/.env"
 
 check_db() {
   psql "$DATABASE_URL" -c "SELECT 1;" > /dev/null 2>&1
@@ -29,7 +29,7 @@ while ! check_db; do
 done
 
 
-cd "$DIR/backend/"
+cd "$DIR/backend"
 echo "[prisma] migrating db..."
 npx prisma migrate reset --force
 
@@ -39,12 +39,19 @@ npx prisma db seed
 echo "[prisma] generating prisma client..."
 npx prisma generate
 
+echo "[backend] launching on the background"
+"$DIR/backend/run.sh" > /dev/null 2>&1 &
+
+echo "[frontend] launching on the background"
+"$DIR/frontend/run.sh" > /dev/null 2>&1 &
+
+
 echo ""
 echo "------------------------------------------------------"
 echo "------------------- DONE  ----------------------------"
 echo "------------------------------------------------------"
 echo ""
-echo ">>> to boot the backend and the frontend, run:"
+echo ">>> if you need to reboot the backend and the frontend, run:"
 echo ""
 echo "backend/run.sh"
 echo "frontend/run.sh"
