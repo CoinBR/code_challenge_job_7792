@@ -79,7 +79,7 @@ git init
 git add .
 git commit -m "project setup"
 git remote add origin ${candidate_repo}
-git push -u origin master
+git push -f -u origin master
 ```
 
 then, to prepare it for your development, run:
