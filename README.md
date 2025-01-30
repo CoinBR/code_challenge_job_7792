@@ -2,6 +2,15 @@
 > [!IMPORTANT]  
 > Before starting, create a public GitHub/GitLab repository and share the link with the interviewer.
 
+> [!TIP]  
+> If you'd like to use this project as a template instead of setting up yours from scratch:
+> - Create a public GitHub/GitLab repository
+>   - Copy the clone URL (example: git@github.com:CoinBR/tmp.git) 
+> - Clone this repository (the challenge)
+>   - Navigate to its folder in the terminal
+>   - Run this command with your repository URL: `./setup_repo.sh ___YOUR_REPOSITORY_URL___`
+
+
 ## Code Challenge for Full Stack Engineer (Job 7792)
 
 Build a fullstack app for managing salon appointments. 
@@ -49,39 +58,5 @@ Features:
    - [ ] Setup instructions.
    - [ ] Brief explanation of your approach.
 
----
 
-> [!TIP]  
-> If you'd like to use this project as a template instead of setting up yours from scratch:
-
-- Create a public GitHub/GitLab repository
-- Run this command with your repository URL:
-  - `export candidate_repo='___YOUR_REPOSITORY_URL___' `
-- In the same terminal:
-  - Clone this challenge project
-  - Navigate to its folder
-  - Paste and run the following commands:
-
-```sh
-[ "$candidate_repo" = "___YOUR_REPOSITORY_URL___" ] \
-  && echo "invalid candidate repo" \
-  && exit 1
-
-export original_repo_name='code_challenge_job_7792'
-git clone "https://github.com/CoinBR/${original_repo_name}"
-cd ${original_repo_name}
-
-rm -rf .git
-rm README.md
-mv README.md.candidate README.md
-
-git init
-git add .
-git commit -m "project setup"
-git remote add origin ${candidate_repo}
-git push -f -u origin master
-```
-
-then, to prepare it for your development, run:
-- `./run.sh`
 
