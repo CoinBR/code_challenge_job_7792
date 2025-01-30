@@ -56,7 +56,7 @@ Features:
 
 - Create a public GitHub/GitLab repository
 - Run this command with your repository URL:
-  - `sh export candidate_repo='___YOUR_REPOSITORY_URL___' `
+  - `export candidate_repo='___YOUR_REPOSITORY_URL___' `
 - In the same terminal:
   - Clone this challenge project
   - Navigate to its folder
