@@ -14,12 +14,12 @@ cd "$DIR/db"
 echo "[postgres] booting db container..."
 ./run.sh
 
-cd "$DIR/frontend"
-echo "[frontend] installing dependencies..."
+cd "$DIR/ui"
+echo "[ui] installing dependencies..."
 npm i
 
-cd "$DIR/backend/"
-echo "[backend] installing dependencies..."
+cd "$DIR/api"
+echo "[api] installing dependencies..."
 npm i
 
 
@@ -29,7 +29,7 @@ while ! check_db; do
 done
 
 
-cd "$DIR/backend"
+cd "$DIR/api"
 echo "[prisma] migrating db..."
 npx prisma migrate reset --force
 
@@ -39,11 +39,11 @@ npx prisma db seed
 echo "[prisma] generating prisma client..."
 npx prisma generate
 
-echo "[backend] launching on the background"
-"$DIR/backend/run.sh" > /dev/null 2>&1 &
+echo "[api] launching on the background"
+"$DIR/api/run.sh" > /dev/null 2>&1 &
 
-echo "[frontend] launching on the background"
-"$DIR/frontend/run.sh" > /dev/null 2>&1 &
+echo "[ui] launching on the background"
+"$DIR/ui/run.sh" > /dev/null 2>&1 &
 
 
 echo ""
@@ -51,16 +51,16 @@ echo "------------------------------------------------------"
 echo "------------------- DONE  ----------------------------"
 echo "------------------------------------------------------"
 echo ""
-echo ">>> if you need to reboot the backend and the frontend, run:"
+echo ">>> if you need to reboot the api and the ui, run:"
 echo ""
-echo "backend/run.sh"
-echo "frontend/run.sh"
+echo "api/run.sh"
+echo "ui/run.sh"
 echo ""
 echo ""
 echo ">>> to try your running solution:"
 echo ""
-echo " backend:   http://localhost:3777/graphql"
-echo "frontend:   http://localhost:8777"
-echo "  db url:   $DATABASE_URL"
+echo "api:  http://localhost:3777/graphql"
+echo " ui:  http://localhost:8777"
+echo " db:  $DATABASE_URL"
 
 cd "$DIR"
