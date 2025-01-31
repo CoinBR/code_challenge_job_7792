@@ -7,7 +7,10 @@
 >   - Copy the clone URL (example: git@github.com:CoinBR/tmp.git) 
 > - Clone this repository (the challenge)
 >   - Navigate to its folder in the terminal
->   - Run this command with your repository URL: `./setup_repo.sh ___YOUR_REPOSITORY_URL___`
+>   - Run this command to load the submodules:
+>     - `git submodule update --init --recursive --remote`
+>   - Run this command with your repository URL: 
+>     - `submodules/clone_and_claim/run.sh ___YOUR_REPOSITORY_URL___`
 
 
 ## Code Challenge for Full Stack Engineer (Job 7792)
