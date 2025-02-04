@@ -10,7 +10,7 @@
 >   - Run this command with your repository URL: 
 >     - `./setup_repo.sh ___YOUR_REPOSITORY_URL___`
 
-## Code Challenge for Full Stack Engineer (Job 7792)
+## Code Challenge - Nest, Prisma, Postgres, Apollo, React
 
 Build a fullstack app for managing salon appointments. 
 This challenge evaluates your proficiency in both frontend and backend development, focusing on GraphQL, PostgreSQL, React, and TypeScript.
