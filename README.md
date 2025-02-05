@@ -10,6 +10,11 @@
 >   - Run this command with your repository URL: 
 >     - `./setup_repo.sh ___YOUR_REPOSITORY_URL___`
 
+> [!NOTE]  
+> This template uses **Nest and Prisma**
+> - If you preefer solving the challenge with basic **Express and SQL**, feel free to use this template instead:
+>   - https://github.com/CoinBR/code_challenge_express_postgres_apollo_react
+
 ## Code Challenge - Nest, Prisma, Postgres, Apollo, React
 
 Build a fullstack app for managing salon appointments. 
